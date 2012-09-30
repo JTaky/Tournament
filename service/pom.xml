@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<modelVersion>4.0.0</modelVersion>
+<parent>
+    <artifactId>tournament</artifactId>
+    <groupId>${tournament.groupId}</groupId>
+    <version>${tournament.version}</version>
+</parent>
+
+<groupId>${tournament.groupId}</groupId>
+<artifactId>service</artifactId>
+<packaging>jar</packaging>
+<version>${tournament.version}</version>
+<name>service</name>
+
+<dependencies>
+    <dependency>
+        <artifactId>persistence</artifactId>
+        <groupId>${tournament.groupId}</groupId>
+        <version>${tournament.version}</version>
+    </dependency>
+</dependencies>
+
+<!--
+<build>
+    <plugins>
+        <plugin>
+        ... config plugin here
+        </plugin>
+    </plugins>
+</build>
+-->
+
+</project>
+

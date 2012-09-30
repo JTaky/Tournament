@@ -1,0 +1,35 @@
+<configuration>
+
+    <appender name="HibernateOut" class="ch.qos.logback.core.FileAppender">
+        <file>hibernate.out.log</file>
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="com.taky" level="TRACE">
+        <appender-ref ref="TournamentOut"/>
+    </logger>    
+
+    <logger name="org.hibernate" level="DEBUG">
+        <appender-ref ref="HibernateOut"/>
+    </logger>
+
+
+    <!-- Strictly speaking, the level attribute is not necessary since -->
+    <!-- the level of the root level is set to DEBUG by default.       -->
+    <root level="ERROR">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
